@@ -1,7 +1,0 @@
-
-<!ELEMENT scheduleList (schedule+)>
-<!ELEMENT schedule (date, hour, content)>
-<!ELEMENT date (#PCDATA)>
-<!ELEMENT hour (#PCDATA)>
-<!ELEMENT content (#PCDATA)>
-<!ATTLIST schedule sid CDATA #IMPLIED>
