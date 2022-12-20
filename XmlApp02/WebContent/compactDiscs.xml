@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE compactDiscs
+[
+<!ELEMENT compactDiscs (compactDisc+)>
+<!ELEMENT compactDisc (artist, title, tracks, price)>
+<!ELEMENT artist (#PCDATA)>
+<!ATTLIST artist type (individule | band) #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title numberOfTracks CDATA #REQUIRED>
+<!ELEMENT tracks (track+)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT track (#PCDATA)>
+]>
+
+<!--  위 DTD 내용을 토대로 XML 문서를 완성한다. -->
+<!--  데이터는 자신이 좋아하는 가수의 곡 정보를 5곡 이상 등록한다. -->
+<compactDiscs>
+
+	<compactDisc>
+		<artist type="individule">임창정</artist>
+		<title numberOfTracks="13"><![CDATA[I'M]]></title>
+		<tracks>
+			<track>노래 한번 할게요</track>
+			<track>이별 후</track>
+			<track>그곳에 멈춰서</track>
+			<track>화해</track>
+			<track>이제 날 놓아줘</track>
+			<track>내 생에 가장 아름다운</track>
+			<track>그마저 내려놓는</track>
+			<track>또 설레이는 이 길</track>
+			<track>순심이</track>
+			<track>너에게 달려간다</track>
+			<track>내가 저지른 사랑</track>
+			<track>세상에 하나뿐인 나</track>
+			<track>내가 저지른 사랑</track>
+			<track>지나고도 같은 오늘</track>
+		</tracks>
+		<price>19300</price>
+	</compactDisc>
+
+
+	<compactDisc>
+		<artist type="individule">Christopher Lund Nissen</artist>
+		<title numberOfTracks="4">Under the Surface</title>
+		<tracks>
+			<track>My Heart</track>
+			<track>Real Life</track>
+			<track>The Chancer</track>
+			<track>Irony</track>
+			<track>High</track>
+			<track>Grow Up</track>
+			<track>Just Kiss Me</track>
+			<track>Bad</track>
+			<track>Monogamy</track>
+		</tracks>
+		<price>17200</price>
+	</compactDisc>
+
+</compactDiscs>
