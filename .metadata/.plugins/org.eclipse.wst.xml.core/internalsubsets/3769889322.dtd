@@ -1,0 +1,11 @@
+
+<!ELEMENT bookList (book+)>
+<!ELEMENT book (title, authors, pub, price, subtitles)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT authors (author+)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT pub (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT subtitles (subtitle+)>
+<!ELEMENT subtitle (#PCDATA)>
+<!ATTLIST book bid CDATA #IMPLIED>

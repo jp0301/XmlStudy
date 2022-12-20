@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\XmlStudy\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+470224337.index
+1619433418.index
+3040748359.index
+3370156661.index
+532229565.index
+741831421.index
+389044387.index

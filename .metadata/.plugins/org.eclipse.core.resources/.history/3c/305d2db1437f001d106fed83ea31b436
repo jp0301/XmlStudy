@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memberList>
+	<!-- 루트 엘리먼트는 하나 -->
+	<!-- 루트 엘리먼트 이름은 『~~~.xml』파일 이름과 동일한 이름 사용 -->
+	<!-- 개인 정보를 표현할 수 있는 문서 작성 -->
+	
+	김태민
+	010-1212-3434
+	JAVA SE
+	ORACLE
+	Servlet&JSP
+	
+	
+</memberList>
