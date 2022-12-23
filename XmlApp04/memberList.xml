@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD 추가 -->
+<!-- <!DOCTYPE memberList []> -->
+<!DOCTYPE memberList 
+[
+<!ELEMENT memberList (memberInfo+)>
+<!ELEMENT memberInfo (name, telephone, curriculumn?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)>
+<!ELEMENT curriculumn (sub+)>
+<!ELEMENT sub (#PCDATA)>
+<!ATTLIST memberInfo mid CDATA #IMPLIED>
+
+]>
+<!-- + : 여러 개 있다. -->
+<!-- ? : 있기도하고 없기도 하다 표시 -->
+
+
+<memberList>
+	
+	<memberInfo mid="1">
+		<name>김태민</name>
+		<telephone><![CDATA[010-1212-3434]]></telephone>
+		<curriculumn>
+			<sub>JAVA SE</sub>
+			<sub>ORACLE</sub>
+			<sub><![CDATA[Servlet&JSP]]></sub>
+		</curriculumn>
+	</memberInfo>
+	
+	<memberInfo mid="2">
+		<name>유동현</name>
+		<telephone><![CDATA[010-7878-8989]]></telephone>
+	</memberInfo>
+	
+</memberList>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
