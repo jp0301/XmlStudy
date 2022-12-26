@@ -65,7 +65,7 @@ public class XmlDomTest04
 			Element root = xmlObj.getDocumentElement();
 			NodeList vehicleNodeList = root.getElementsByTagName("VEHICLE");
 			
-			System.out.println("----------------------------------------------------------");
+			System.out.println("==========================================================");
 			System.out.println("NO    MAKE      MODEL      YEAR    STYLE           PRICE");
 			System.out.println("----------------------------------------------------------");
 
@@ -83,33 +83,43 @@ public class XmlDomTest04
 														   , getText(vehicleElement, "PRICE")
 								 );
 				
-				
+				/* Option print */
 				System.out.println("Options --------------------------------------------------");
 				
 				NodeList optionNodeList = vehicleElement.getElementsByTagName("OPTIONS");
 				
+				/*
+				 * if(optionNodeList.getLength() > 0) { Node optionNode =
+				 * optionNodeList.item(0); Element optionElement = (Element)optionNode;
+				 * 
+				 * NodeList subNodeList = optionElement.getChildNodes();
+				 * 
+				 * for (int j = 0; j < subNodeList.getLength(); j++) { Node subNode =
+				 * subNodeList.item(j);
+				 * 
+				 * if (subNode.getNodeType() == 1) { Element subNodeElement = (Element)subNode;
+				 * System.out.printf("         %s : %s%n", subNodeElement.getNodeName(),
+				 * subNodeElement.getTextContent()); } } }
+				 */
 				
-				if(optionNodeList.getLength() > 0)
+				NodeList options = vehicleElement.getElementsByTagName("OPTIONS");
+				Node option = options.item(0);
+				Element optionElement = (Element)option;
+				
+				NodeList childNodes = optionElement.getChildNodes();
+				for (int k = 0; k < childNodes.getLength(); k++)
 				{
-					Node optionNode = optionNodeList.item(0);
-					Element optionElement = (Element)optionNode;
-			
-					NodeList subNodeList = optionElement.getChildNodes();
-					
-					for (int j = 0; j < subNodeList.getLength(); j++)
+					Node childNode = childNodes.item(k);
+					if (childNode.getNodeType() == 1)
 					{
-						Node subNode = subNodeList.item(j);
-						
-						if (subNode.getNodeType() == 1)
-						{
-							Element subNodeElement = (Element)subNode;
-							System.out.printf("         %s : %s%n", subNodeElement.getNodeName(), subNodeElement.getTextContent());
-						}
+						System.out.printf("             %s  : %s%n", childNode.getNodeName()
+								                                    , childNode.getTextContent());
 					}
 				}
-				System.out.println("----------------------------------------------------------");	
-				
+				System.out.println("----------------------------------------------------------");
+					
 			}
+			System.out.println("==========================================================");
 			
 		} catch (Exception e)
 		{
