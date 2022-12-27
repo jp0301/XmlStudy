@@ -123,9 +123,9 @@ public class XmlDomTest06
 								, XMLDOM.getText(dataElement, "tmn")	// 최저 온도
 								, XMLDOM.getText(dataElement, "tmx")	// 최고 온도
 								, XMLDOM.getText(dataElement, "rnSt")	// 강수 확률
-								);
-					 
+						);
 					}
+					
 					
 				}
 				
