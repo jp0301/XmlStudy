@@ -25,6 +25,7 @@
 	
 	// 도시 정보 및 날짜 시간 별 날씨 정보
 	ArrayList<String> cityList = dao.weatherCityList();
+	
 	for (int i=0; i<cityList.size(); i++)
 	{
 		sb.append(String.format("<h3>%s</h3>", cityList.get(i)));
@@ -44,12 +45,11 @@
 		{
 			sb.append("<tr>");
 			sb.append(String.format("<td>%s</td>", w.getTmEf()));									// 날짜
-			sb.append(String.format("<td><img src='images/%s'/> %s</td>",w.getImg() ,w.getWf()));	// 날씨
+			sb.append(String.format("<td><img src='images/%s'/> %s</td>", w.getImg() ,w.getWf()));	// 날씨
 			sb.append(String.format("<td>%s℃ / %s℃</td>", w.getTmn(), w.getTmx()));				// 최저/최고 기온
-			sb.append(String.format("<td>%s</td>", w.getRnSt()));									// 강수확률
+			sb.append(String.format("<td>%s%%</td>", w.getRnSt()));									// 강수확률
 			sb.append("</tr>");
 		}
-		
 		sb.append("</table>");
 	}
 
@@ -69,6 +69,7 @@
 
 <script type="text/javascript">
 
+	/* $(function() { */
 	$(document).ready(function()
 	{
 		// 확인
